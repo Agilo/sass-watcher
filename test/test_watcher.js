@@ -6,6 +6,12 @@ describe('Watcher', function () {
   this.slow(500);
   this.timeout(5000);
 
+  before(function () {
+    if (!fs.existsSync('test/build/')) {
+      fs.mkdirSync('test/build/');
+    }
+  });
+
   it("emits 'init' event on init", function (done) {
     const watcher = new Watcher('test/resources/simple.scss');
     watcher.run();
