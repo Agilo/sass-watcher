@@ -18,41 +18,6 @@ The only way is to "watch" the generated CSS file with another watcher. **It's n
 npm install node-sass-watcher
 ```
 
-## Usage: CLI
-
-```sh
-node-sass-watcher src/input.scss -o dist/output.css -c 'node-sass <input> | postcss -u autoprefixer --autoprefixer.browsers="ie >= 9, > 1%"'
-```
-
-_Note:_ You need to run `node-sass` inside the post-processing command,
-because I don't want to deal with all `node-sass` CLI arguments.
-In fact, current implementation is `node-sass`-independent.
-
-More about `--command` (`-c`):
-
-* contents of the `input.scss` are passed to the command's `stdin`
-* `<input>` will be replaced with the input file path
-* `<output>` will be replaced with the output file path, provided with `--output` (`-o`) argument (if specified)
-* Shell syntax is allowed: pipes (`|`), FD redirects (`> output.css`), etc
-
-If there's no `-o` specified, the command output will be printed to `stdout`.
-
-All CLI options:
-
-```
-Usage: node-sass-watcher <input.scss> [options]
-
-Options:
-  -c, --command             Pass a command to execute. Shell syntax allowed
-  -o, --output              Output CSS file path
-  -r, --root-dir            Directory to watch for addition/deletion of the files. Default: .
-  -I, --include-path        Path to look for imported files. Use multiple if needed
-  -e, --include-extensions  File extensions to watch. Default: scss, sass, css
-  -v, --verbose             Verbosity level: from -v to -vvv
-  -h, --help                Show help
-  -V, --version             Show version number
-```
-
 ## Usage: JS
 
 Example: `node-sass` → `autoprefixer`.

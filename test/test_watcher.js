@@ -1,5 +1,5 @@
-const fs = require('fs');
-const Watcher = require('../lib/watcher');
+import fs from 'fs';
+import Watcher from '../lib/watcher.js';
 
 describe('Watcher', function () {
   // expect tests to be slow, due to nature of the CLI (invoking sub-processes)

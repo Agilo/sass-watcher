@@ -13,20 +13,20 @@ jobs:
           - ubuntu-latest
           - windows-latest
         node-version:
-          - "12"
-          - "14"
-          - "16"
+          - '12'
+          - '14'
+          - '16'
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
 
       - run: npm install
 
@@ -36,16 +36,13 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "npm"
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@anteprimorac"
-
-      - name: Fix package name
-        run: 'node -e "const fs = require(\"fs\"); const path = require(\"path\"); const packageJson = require(\"./package.json\"); fs.writeFileSync(path.join(__dirname, \"package.json\"), JSON.stringify({ ...packageJson, name: \"@anteprimorac/node-sass-watcher\", author: \"anteprimorac\", repository: { type: \"git\", url: \"https://github.com/anteprimorac/node-sass-watcher.git\" }, publishConfig: { access: \"public\" } }, null, 2));"'
+          cache: 'npm'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@anteprimorac'
 
       - run: npm install
 
