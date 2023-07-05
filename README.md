@@ -1,35 +1,35 @@
-# node-sass-watcher
+# @agilo/sass-watcher
 
-[![Test](https://github.com/anteprimorac/node-sass-watcher/actions/workflows/test.yml/badge.svg)](https://github.com/anteprimorac/node-sass-watcher/actions/workflows/test.yml)
+[![Test](https://github.com/agilo/sass-watcher/actions/workflows/test.yml/badge.svg)](https://github.com/agilo/sass-watcher/actions/workflows/test.yml)
 
 SCSS watcher with post-processing.
 
 ## Why?
 
-`node-sass` has `--watch` option but it doesn't allow post-processing of the compiled CSS.
+`sass` has `--watch` option but it doesn't allow post-processing of the compiled CSS.
 
 The only way is to "watch" the generated CSS file with another watcher. **It's not convenient**.
 
-`node-sass-watcher` provides simple way to do SCSS watching with post-processing.
+`@agilo/sass-watcher` provides simple way to do SCSS watching with post-processing.
 
 ## Install
 
 ```sh
-npm install node-sass-watcher
+npm install @agilo/sass-watcher
 ```
 
 ## Usage: JS
 
-Example: `node-sass` → `autoprefixer`.
+Example: `sass` → `autoprefixer`.
 
 ```js
 // watch-it.js
 
-const fs = require('fs');
-const sass = require('node-sass');
-const postcss = require('postcss');
-const autoprefixer = require('autoprefixer');
-const Watcher = require('node-sass-watcher');
+import fs from 'fs';
+import * as sass from 'sass';
+import postcss from 'postcss';
+import autoprefixer from 'autoprefixer';
+import Watcher from '@agilo/sass-watcher';
 
 // Input variables
 const inputFile = process.argv[2];

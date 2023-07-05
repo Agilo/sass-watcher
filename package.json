@@ -1,5 +1,5 @@
 {
-  "name": "@anteprimorac/node-sass-watcher",
+  "name": "@agilo/sass-watcher",
   "version": "1.0.0",
   "description": "SCSS watcher with post-processing.",
   "type": "module",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anteprimorac/node-sass-watcher.git"
+    "url": "git+https://github.com/agilo/sass-watcher.git"
   },
   "keywords": [
     "node",
@@ -28,12 +28,11 @@
     "watch",
     "post-process"
   ],
-  "author": "anteprimorac",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anteprimorac/node-sass-watcher/issues"
+    "url": "https://github.com/agilo/sass-watcher/issues"
   },
-  "homepage": "https://github.com/anteprimorac/node-sass-watcher#readme",
+  "homepage": "https://github.com/agilo/sass-watcher#readme",
   "publishConfig": {
     "access": "public"
   }

@@ -1,7 +1,7 @@
 # Change Log
 
 
-## 1.0.0 - 2023-06-29
+## 1.0.0 - 2023-07-05
 
 ### Changed
 - Bumps npm dependencies
