@@ -1,0 +1,8 @@
+/.idea/
+/node_modules/
+/test/build/
+/.vscode/settings.json
+/.github/
+/media/
+/test/
+/.nvmrc
