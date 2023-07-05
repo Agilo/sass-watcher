@@ -1,6 +1,11 @@
 # Change Log
 
 
+## 1.0.1 - 2023-07-05
+
+### Added
+- Typescript types
+
 ## 1.0.0 - 2023-07-05
 
 ### Changed
